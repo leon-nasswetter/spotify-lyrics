@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useAuth from "./useAuth";
-import TrackSearchResult from "./TrackSearchResult"
+import TrackSearchResult from "./TrackSearchResult";
 import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 
@@ -12,7 +12,7 @@ export default function Dashboard({ code }) {
   const accessToken = useAuth(code);
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-//   console.log(searchResults)
+  //   console.log(searchResults)
 
   useEffect(() => {
     if (!accessToken) return;
@@ -62,8 +62,8 @@ export default function Dashboard({ code }) {
       />
 
       <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
-        {searchResults.map(track => (
-            <TrackSearchResult track={track} key={track.uri} />
+        {searchResults.map((track) => (
+          <TrackSearchResult track={track} key={track.uri} />
         ))}
       </div>
       <div>Bottom</div>
