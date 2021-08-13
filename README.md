@@ -1,1 +1,1 @@
-# spotify-lyrics
+# App that lets you search spotify -> play music -> display lyrics
